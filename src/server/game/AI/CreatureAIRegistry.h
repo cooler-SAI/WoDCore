@@ -1,0 +1,17 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  MILLENIUM-STUDIO
+//  Copyright 2016 Millenium-studio SARL
+//  All Rights Reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#ifndef TRINITY_CREATUREAIREGISTRY_H
+#define TRINITY_CREATUREAIREGISTRY_H
+
+namespace AIRegistry
+{
+    void Initialize(void);
+}
+#endif
+
