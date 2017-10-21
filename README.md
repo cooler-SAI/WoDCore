@@ -20,6 +20,7 @@ Never commit into interrealm only crash fix, wod branch is the prod branch !
 
 
 ## Install
++ Get dbc,db2,maps,vmaps,mmaps : https://mega.nz/#!GUlUlB6J!mefm3EudO3lLn1FLLfJJxv8DH6a1Zh1iCOmQAl_WC48
 
 Detailed installation guides are available in the wiki for
 [Windows](http://collab.kpsn.org/display/tc/Win),

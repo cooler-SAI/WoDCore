@@ -1,0 +1,1 @@
+copy Blizzard Entertainment folder to C:\ProgramData and replace files
