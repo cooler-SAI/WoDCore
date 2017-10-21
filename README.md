@@ -1,5 +1,5 @@
 ## Overview
-Firestorm WoD Leak World of Warcraft Warlords of Draenor (6.2.3.20726) emulator based on TrinityCore project, JadeCore (5.0.5), Garrosh (5.4.X)
+Firestorm WoD Leak World of Warcraft Warlords of Draenor (6.2.3.20779) emulator based on TrinityCore project, JadeCore (5.0.5), Garrosh (5.4.X)
 
 ### BEWARE ! 
 Never commit into interrealm only crash fix, wod branch is the prod branch !
