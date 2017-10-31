@@ -1,5 +1,5 @@
 ###############################################
-# Trinity Core Auth Server configuration file #
+# WoDCore Auth Server configuration file #
 ###############################################
 [authserver]
 
@@ -148,9 +148,9 @@ ReporterAdress = "localhost:3000"
 #                                                                 section my.ini)
 #                     ".;/path/to/unix_socket;username;password;database" - (use Unix sockets on
 #                                                                           Unix/Linux)
-#        Default:     "127.0.0.1;3306;trinity;trinity;auth"
+#        Default:     "127.0.0.1;3306;wodcore;wodcore;auth"
 
-LoginDatabaseInfo = "127.0.0.1;3306;trinity;trinity;auth"
+LoginDatabaseInfo = "127.0.0.1;3306;wodcore;wodcore;auth"
 
 #
 #    LoginDatabase.WorkerThreads

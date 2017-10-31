@@ -1,5 +1,5 @@
 ################################################
-# Trinity Core World Server configuration file #
+# WoDCore World Server configuration file #
 ################################################
 [worldserver]
 
@@ -87,16 +87,16 @@ LogsDir = ""
 #                                                                 section my.ini)
 #                     ".;/path/to/unix_socket;username;password;database" - (use Unix sockets on
 #                                                                           Unix/Linux)
-#        Default:     "127.0.0.1;3306;trinity;trinity;auth"       - (LoginDatabaseInfo)
-#                     "127.0.0.1;3306;trinity;trinity;world"      - (WorldDatabaseInfo)
-#                     "127.0.0.1;3306;trinity;trinity;characters" - (CharacterDatabaseInfo)
+#        Default:     "127.0.0.1;3306;wodcore;wodcore;auth"       - (LoginDatabaseInfo)
+#                     "127.0.0.1;3306;wodcore;wodcore;world"      - (WorldDatabaseInfo)
+#                     "127.0.0.1;3306;wodcore;wodcore;characters" - (CharacterDatabaseInfo)
 
-LoginDatabaseInfo      = "127.0.0.1;3306;trinity;trinity;auth"
-WorldDatabaseInfo      = "127.0.0.1;3306;trinity;trinity;world"
-CharacterDatabaseInfo  = "127.0.0.1;3306;trinity;trinity;characters"
-HotfixDatabaseInfo     = "127.0.0.1;3306;trinity;trinity;hotfix"
+LoginDatabaseInfo      = "127.0.0.1;3306;wodcore;wodcore;auth"
+WorldDatabaseInfo      = "127.0.0.1;3306;wodcore;wodcore;world"
+CharacterDatabaseInfo  = "127.0.0.1;3306;wodcore;wodcore;characters"
+HotfixDatabaseInfo     = "127.0.0.1;3306;wodcore;wodcore;hotfix"
 WebDatabase.enable     = 0
-WebDatabaseInfo        = "127.0.0.1;3306;trinity;trinity;web"
+WebDatabaseInfo        = "127.0.0.1;3306;wodcore;wodcore;web"
 
 #
 #    LoginDatabase.WorkerThreads
@@ -639,7 +639,7 @@ DeclinedNames = 0
 #    Expansion
 #        Description: Allow server to use content from expansions. Checks for expansion-related
 #                     map files, client compatibility and class/race character creation.
-#        Default:     5 - (Expansion 5 Warlord of draenor)
+#        Default:     5 - (Expansion 5 Warlords of draenor)
 #                     4 - (Expansion 4 Mists of Pandaria)
 #                     3 - (Expansion 3 Cataclysm)
 #                     2 - (Expansion 2 Warth of the Lich King)
