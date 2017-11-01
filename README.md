@@ -24,7 +24,8 @@ Example: Win32 OpenSSL v1.0.2k
 + boost 1.64.0 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.64.0/boost_1_64_0-msvc-14.1-64.exe/download
                32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.64.0/boost_1_64_0-msvc-14.1-32.exe/download
 + Xcode 7 (Mac only)
-
++ P>S> ONLY FOR LOCAL PLAY DOWNLOAD Microsoft Visual C++ 2015 Redistributable Package 
+https://www.microsoft.com/en-us/download/details.aspx?id=48145
 
 ## Install
 
