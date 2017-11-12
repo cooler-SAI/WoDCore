@@ -774,26 +774,31 @@ bool SmartAI::sOnDummyEffect(Unit* caster, uint32 spellId, SpellEffIndex effInde
 
 void SmartAI::SetCombatMove(bool on)
 {
-    if (mCanCombatMove == on)
-        return;
-    mCanCombatMove = on;
-    if (!HasEscortState(SMART_ESCORT_ESCORTING))
-    {
-        if (on && me->getVictim())
-        {
-            if (me->GetMotionMaster()->GetCurrentMovementGeneratorType() == IDLE_MOTION_TYPE)
-            {
-                SetRun(mRun);
-                me->GetMotionMaster()->MoveChase(me->getVictim());
-                me->CastStop();
-            }
-        }
-        else
-        {
-            me->StopMoving();
-            me->GetMotionMaster()->MoveIdle();
-        }
-    }
+	if (mCanCombatMove == on)
+		return;
+	mCanCombatMove = on;
+	if (!HasEscortState(SMART_ESCORT_ESCORTING))
+	{
+		if (on && me->getVictim())
+		{
+			if (me->GetMotionMaster()->GetCurrentMovementGeneratorType() == IDLE_MOTION_TYPE)
+			{
+				SetRun(mRun);
+				me->GetMotionMaster()->MoveChase(me->getVictim());
+				me->CastStop();
+			}
+		}
+		else
+		{
+			if (me->HasUnitState(UNIT_STATE_CONFUSED_MOVE | UNIT_STATE_FLEEING_MOVE))
+				return;
+
+			me->GetMotionMaster()->MovementExpired();
+			me->GetMotionMaster()->Clear(true);
+			me->StopMoving();
+			me->GetMotionMaster()->MoveIdle();
+		}
+	}
 }
 
 void SmartAI::SetFollow(Unit* target, float dist, float angle, uint32 credit, uint32 end, uint32 creditType)
