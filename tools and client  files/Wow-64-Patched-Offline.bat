@@ -1,0 +1,1 @@
+"Wow-64-Patched.exe" -uid localhost

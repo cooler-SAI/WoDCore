@@ -153,12 +153,12 @@ INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `b
 UPDATE `creature_template` SET `unit_flags2` = 1 WHERE `entry` = 49340;
 
 
+UPDATE `creature_template` SET `scale` = 3 WHERE `entry` = 1512;
+UPDATE `creature_template` SET `scale` = 1.5 WHERE `entry` = 1508;
 
+UPDATE `quest_template` SET `PrevQuestId` = 24971 WHERE `Id` = 24972;
 
-
-
-
-
+UPDATE `quest_template` SET `NextQuestId` = 24972, `ExclusiveGroup` = 0 WHERE `Id` = 24971;
 
 UPDATE `creature` SET `spawndist` = 10, `MovementType` = 1 WHERE `id` IN (50039,15294,15271,3101,3102,15273,35200,34865,1501);
 
