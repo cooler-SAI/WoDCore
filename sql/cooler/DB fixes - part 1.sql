@@ -151,19 +151,51 @@ UPDATE `creature` SET `spawndist` = 0, `MovementType` = 0 WHERE `id` IN (49340);
 DELETE FROM `creature_template_addon` WHERE (`entry`=49340);
 INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES (49340, 0, 0, 7, 1, 65, '');
 UPDATE `creature_template` SET `unit_flags2` = 1 WHERE `entry` = 49340;
-
-
+UPDATE `creature_template` SET `scale` = 3.5 WHERE `entry` = 1553;
+UPDATE `creature_template` SET `scale` = 3 WHERE `entry` = 1513;
 UPDATE `creature_template` SET `scale` = 3 WHERE `entry` = 1512;
 UPDATE `creature_template` SET `scale` = 1.5 WHERE `entry` = 1508;
 
 UPDATE `quest_template` SET `PrevQuestId` = 24971 WHERE `Id` = 24972;
+UPDATE `quest_template` SET `RequiredRaces` = 2098253, `Flags` = 524288 WHERE `Id` = 2159;
 
+UPDATE `quest_template` SET `Flags` = 3735552 WHERE `Id` = 2159;
 UPDATE `quest_template` SET `NextQuestId` = 24972, `ExclusiveGroup` = 0 WHERE `Id` = 24971;
+UPDATE `quest_template` SET `Flags` = 0 WHERE `Id` = 2159;
 
-UPDATE `creature` SET `spawndist` = 10, `MovementType` = 1 WHERE `id` IN (50039,15294,15271,3101,3102,15273,35200,34865,1501);
+UPDATE `quest_template` SET `RequiredRaces` = 0, `Flags` = 8 WHERE `Id` = 2159;
+
+UPDATE `creature_template` SET `InhabitType` = 1 WHERE `entry` = 1995;
+
+UPDATE `quest_template` SET `SpecialFlags` = 0 WHERE `SpecialFlags` = 4;
+UPDATE `creature_template` SET `faction` = 189 WHERE `entry` = 37956;
+UPDATE `creature_template` SET `faction` = 189 WHERE `entry` = 38046;
+
+UPDATE `creature_template` SET `npcflag` = 0 WHERE `entry` = 42645;
+UPDATE `creature_template` SET `minlevel` = 1, `maxlevel` = 1 WHERE `entry` = 42839;
+SET @ENTRY := 43325;
+UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
+DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
+(@ENTRY,0,0,0,0,0,100,0,0,0,2300,3900,11,80944,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Fling Fungus'),
+(@ENTRY,0,1,0,9,0,100,0,0,20,15000,25000,11,87347,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Giftpilz on Close');
 
 
-UPDATE `creature` SET `spawndist` = 0, `MovementType` = 0 WHERE `id` IN (14545,62,12349,14543,14544,12346,12350,39014);
+
+SET @ENTRY := 37960;
+UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
+(@ENTRY,0,0,1,8,0,100,0,70874,0,0,0,33,39157,0,0,0,0,0,7,0,0,0,0,0,0,0,"on Spell Hit - Give Credit"),
+(@ENTRY,0,1,2,61,0,100,0,0,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"on Spell Hit - Despawn");
+
+
+
+
+UPDATE `creature` SET `spawndist` = 8, `MovementType` = 1 WHERE `id` IN (50039,37070,46363,2031,706,37073,15294,15271,3101,3102,15273,35200,34865,1501);
+
+
+UPDATE `creature` SET `spawndist` = 0, `MovementType` = 0 WHERE `id` IN (14545,36697,106,44617,37173,49477,49478,37218,62,12349,14543,14544,12346,12350,39014);
 
 
 
