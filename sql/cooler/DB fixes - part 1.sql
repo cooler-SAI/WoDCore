@@ -179,9 +179,9 @@ DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
 (@ENTRY,0,0,0,0,0,100,0,0,0,2300,3900,11,80944,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Fling Fungus'),
 (@ENTRY,0,1,0,9,0,100,0,0,20,15000,25000,11,87347,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Giftpilz on Close');
-
-
-
+UPDATE `creature_template` SET `faction` = 189 WHERE `entry` = 34511;
+UPDATE `creature_template` SET `faction` = 189 WHERE `entry` = 34884;
+UPDATE `creature_template` SET `faction` = 189 WHERE `entry` = 35627;
 SET @ENTRY := 37960;
 UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
@@ -189,13 +189,44 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 (@ENTRY,0,0,1,8,0,100,0,70874,0,0,0,33,39157,0,0,0,0,0,7,0,0,0,0,0,0,0,"on Spell Hit - Give Credit"),
 (@ENTRY,0,1,2,61,0,100,0,0,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"on Spell Hit - Despawn");
 
+DELETE FROM `gameobject` WHERE `id`=235883;
+INSERT INTO `gameobject` (`guid`,`id`,`map`,`zoneId`,`areaId`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`animprogress`,`state`,`isActive`,`custom_flags`,`protect_anti_doublet`) VALUES
+(8489641, 235883, 1116, 6941, 7334, 1, 1, 3734.65, -4042.98, 44.8187, 0.995794, 0, 0, 0, 0, 120, 255, 1, 0, 0, 0),
+(8489640, 235883, 1190, 4, 5077, 1, 1, -11266.7, -3624.88, 10.9119, 0, 0, 0, 0, 0, 0, 255, 1, 0, 0, 0),
+(22164838, 235883, 870, 6134, 6369, 1, 4294967295, -1021.78, -1071.57, 1.11939, 5.7793, 0, 0, 0.249284, -0.96843, 300, 0, 1, 0, 0, 0);
+
+
+DELETE FROM `creature_template_addon` WHERE (`entry`=47091);
+INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES (47091, 0, 0, 0, 1, 0, 84063);
+
+
+DELETE FROM `creature_template_addon` WHERE (`entry`=35912);
+INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES (35912, 0, 0, 0, 1, 0, 84063);
+
+
+DELETE FROM `gameobject` WHERE `id`=190960;
+INSERT INTO `gameobject` (`guid`,`id`,`map`,`zoneId`,`areaId`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`animprogress`,`state`,`isActive`,`custom_flags`,`protect_anti_doublet`) VALUES
+(31831, 190960, 571, 4395, 4740, 1, 1, 5719.19, 719.681, 641.728, 0.837757, 0, 0, 0, 1, 300, 100, 1, 0, 0, 0),
+(59339, 190960, 1, 616, 4990, 1, 8, 4845.42, -2812.35, 1440.17, 5.88565, 0, 0, 0.197463, -0.98031, 300, 0, 1, 0, 0, 0),
+(59369, 190960, 1, 616, 4990, 1, 8, 4878.77, -2795.11, 1435.34, 2.76525, 0, 0, 0.982348, 0.187064, 300, 0, 1, 0, 0, 0);
+
+UPDATE `creature` SET `phaseMask`="1" WHERE `phaseMask`="1024" AND `map`="654" AND `zoneId`="4714"; 
+
+SET @ENTRY := 36231;
+UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
+(@ENTRY,0,0,1,8,0,100,0,69094,0,0,0,33,36233,0,0,0,0,0,7,0,0,0,0,0,0,0,"on Spell Hit - Give Credit"),
+(@ENTRY,0,1,2,61,0,100,0,0,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"on Spell Hit - Despawn");
 
 
 
-UPDATE `creature` SET `spawndist` = 8, `MovementType` = 1 WHERE `id` IN (50039,37070,46363,2031,706,37073,15294,15271,3101,3102,15273,35200,34865,1501);
 
 
-UPDATE `creature` SET `spawndist` = 0, `MovementType` = 0 WHERE `id` IN (14545,36697,106,44617,37173,49477,49478,37218,62,12349,14543,14544,12346,12350,39014);
+UPDATE `creature` SET `spawndist` = 8, `MovementType` = 1 WHERE `id` IN (50039,36231,34511,16521,37070,46363,2031,706,37073,15294,15271,3101,3102,15273,35200,34865,1501);
+
+
+UPDATE `creature` SET `spawndist` = 0, `MovementType` = 0 WHERE `id` IN (16518,14545,36697,106,44617,37173,49477,49478,37218,62,12349,14543,14544,12346,12350,39014);
 
 
 
