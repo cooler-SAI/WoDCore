@@ -220,10 +220,51 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 (@ENTRY,0,1,2,61,0,100,0,0,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"on Spell Hit - Despawn");
 
 
+-- Ashenvale Bowman
+SET @ENTRY := 33195;
+UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
+DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
+(@ENTRY,0,0,0,0,0,100,0,0,0,2300,3900,11,6660,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Shoot'),
+(@ENTRY,0,1,0,2,0,100,1,0,15,0,0,25,0,0,0,0,0,0,1,0,0,0,0,0,0,0,'Flee at 15% HP'),
+(@ENTRY,0,2,0,0,0,100,0,5000,8000,12000,15000,11,78754,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Arcane Shot'),
+(@ENTRY,0,3,0,0,0,100,0,4000,10000,10000,22000,11,78841,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Aimed Shot');
+
+-- Forest Spider
+SET @ENTRY := 30;
+UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
+DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
+INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
+(@ENTRY,0,0,0,0,0,100,0,5000,8000,12000,15000,11,11918,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Poison');
+
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_gromkar_gunner", AIName = "" WHERE entry = 77483;
+UPDATE `creature_template` SET ScriptName='spell_q24747_custom_kill_credit' WHERE entry=38250;
+UPDATE creature_template SET ScriptName = "npc_lurking_tempest", AIName = "" WHERE entry = 45704;
+
+grimrail_depot_rocketspark_spell_x21_01a_missile_barrage 162407
+grimrail_depot_rocketspark_spell_vx18_target_eliminator 162500
+grimrail_depot_skylord_torva_at_freezing_snare 162059
 
 
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_bombadier", AIName = "" WHERE entry = 81407;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_assault_cannon", AIName = "" WHERE entry = 79548;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_laborer", AIName = "" WHERE entry = 81235;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_overseer", AIName = "" WHERE entry = 81212;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_gromkar_cinderseer", AIName = "" WHERE entry = 88163;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_gromkar_hulk", AIName = "" WHERE entry = 80938;
+UPDATE creature_template SET ScriptName = "grimrail_depot_rocketspark_mob_borka", AIName = "" WHERE entry = 86226;
+UPDATE creature_template SET ScriptName = "grimrail_depot_nitrogg_thundertower_mob_gromkar_grenadier", AIName = "" WHERE entry = 79739;
+UPDATE creature_template SET ScriptName = "grimrail_depot_nitrogg_thundertower_mob_gromkar_boomer", AIName = "" WHERE entry = 79720;
+UPDATE creature_template SET ScriptName = "grimrail_depot_nitrogg_thundertower_mob_iron_turret", AIName = "" WHERE entry = 85216;
+UPDATE `creature_template` SET `speed_run`=1.28571426868439, `npcflag`=0, `VehicleId`=494, `minlevel`=4, `maxlevel`=4, `Faction_A`=2203, `Faction_H`=2203,`Unit_Flags`=8, `Modelid1`=236, `Resistance2`=90, `Resistance4`=1, `unit_class`=2, `scriptname`='npc_greymane_horse', `mechanic_immune_mask`=2147483647 WHERE `entry`=35905;
+UPDATE `creature_template` SET `ScriptName` = 'mob_general_purpose_bunnyJMF' WHERE `entry` = 55091;
+UPDATE creature_template SET ScriptName = "boss_skylord_torva", AIName = "" WHERE entry = 80005;
+UPDATE creature_template SET ScriptName = "boss_nitrogg_thundertower", AIName = "" WHERE entry = 79545;
+UPDATE creature_template SET ScriptName = "boss_rocketspark", AIName = "" WHERE entry = 77803;
+UPDATE creature_template SET ScriptName = "the_everbloom_archmage_sol_mob_noxious_explosion", AIName = "" WHERE entry = 213151;
 
-UPDATE `creature` SET `spawndist` = 8, `MovementType` = 1 WHERE `id` IN (50039,36231,34511,16521,37070,46363,2031,706,37073,15294,15271,3101,3102,15273,35200,34865,1501);
+
+UPDATE `creature` SET `spawndist` = 8, `MovementType` = 1 WHERE `id` IN (50039,57205,53704,56730,36231,34511,16521,37070,46363,2031,706,37073,15294,15271,3101,3102,15273,35200,34865,1501);
 
 
 UPDATE `creature` SET `spawndist` = 0, `MovementType` = 0 WHERE `id` IN (16518,14545,36697,106,44617,37173,49477,49478,37218,62,12349,14543,14544,12346,12350,39014);
