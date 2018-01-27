@@ -241,10 +241,100 @@ UPDATE creature_template SET ScriptName = "grimrail_depot_mob_gromkar_gunner", A
 UPDATE `creature_template` SET ScriptName='spell_q24747_custom_kill_credit' WHERE entry=38250;
 UPDATE creature_template SET ScriptName = "npc_lurking_tempest", AIName = "" WHERE entry = 45704;
 
-grimrail_depot_rocketspark_spell_x21_01a_missile_barrage 162407
-grimrail_depot_rocketspark_spell_vx18_target_eliminator 162500
-grimrail_depot_skylord_torva_at_freezing_snare 162059
+ 
+ 
+ 
+  
+   
+ 
+  
+REPLACE INTO spell_script_names VALUES
+(6229, 'spell_warl_twilight_ward_s12'),
+(104048, 'spell_warl_twilight_ward_s12'); 
+REPLACE INTO `spell_script_names` VALUES (175217, 'spell_gen_draenor_feast');
+REPLACE INTO `spell_script_names` (`spell_id`, `ScriptName`) VALUES (88685, 'spell_pri_holy_word_sanctuary');
+REPLACE INTO `spell_script_names`(`spell_id`,`ScriptName`) VALUES (161399,'spell_item_Swapblaster'); 
 
+REPLACE INTO spell_script_names VALUES
+(50051, "spell_ethereal_pet_aura"),
+(50101, "spell_ethereal_pet_onkill_steal_essence");
+
+REPLACE INTO spell_script_names VALUE (162407, 'grimrail_depot_rocketspark_spell_x21_01a_missile_barrage');
+REPLACE INTO spell_script_names VALUE (162500, 'grimrail_depot_rocketspark_spell_vx18_target_eliminator');
+REPLACE INTO spell_script_names VALUE (162059, 'grimrail_depot_skylord_torva_at_freezing_snare');
+REPLACE INTO spell_script_names VALUE (166565, 'grimrail_depot_nitrogg_thundertower_slag_blast');
+REPLACE INTO spell_script_names VALUE (166571, 'grimrail_depot_nitrogg_thundertower_at_slagblast');
+REPLACE INTO spell_script_names VALUE (161589, 'grimrail_depot_skylord_tovra_at_diffused_energy');
+REPLACE INTO spell_script_names VALUE (166346, 'grimrail_depot_skylord_tovra_spell_thunder_zone');
+REPLACE INTO spell_script_names VALUE (162058, 'grimrail_depot_skylord_tovra_at_spinning_spear');
+REPLACE INTO spell_script_names VALUE (166341, 'grimrail_depot_at_thunder_zone');
+REPLACE INTO spell_script_names VALUE (153690, 'shadowmoon_burial_grounds_bonemaw_necrotic_pitch');
+REPLACE INTO spell_script_names VALUE (93720, 'spell_echo_of_sylvanas_wracking_pain_dmg');
+REPLACE INTO spell_script_names VALUE (74805, 'spell_halion_summon_exit_portals');
+REPLACE INTO spell_script_names VALUE (163966, 'grimrail_depot_spell_activating');
+REPLACE INTO spell_script_names VALUE (176033, 'grimrail_depot_at_flametongue');
+REPLACE INTO spell_script_names VALUE (166387, 'grimrail_depot_at_healing_rain');
+REPLACE INTO spell_script_names VALUE (166397, 'grimrail_depot_spell_arcane_blitz');
+REPLACE INTO spell_script_names VALUE (166676, 'grimrail_depot_spell_sharpnel_blast');
+REPLACE INTO spell_script_names VALUE (164168, 'grimrail_depot_spell_dash_dummy');
+
+REPLACE INTO spell_script_names VALUE (163550, 'grimrail_depot_nitrogg_thundertower_spell_blackrock_bomb');
+REPLACE INTO spell_script_names VALUE (160681, 'grimrail_depot_nitrogg_thundertower_spell_suppressive_fire');
+REPLACE INTO spell_script_names VALUE (153068, 'shadowmoon_burial_grounds_nhalish_spell_void_devestation');
+REPLACE INTO spell_script_names VALUE (153072, 'shadowmoon_burial_grounds_nhallish_at_vd');
+REPLACE INTO spell_script_names VALUE (233920, 'shadowmoon_burial_grounds_gameobject_nerzul_door');
+REPLACE INTO spell_script_names VALUE (75875, 'spell_halion_mark_damage_aura_heroic');
+REPLACE INTO spell_script_names VALUE (178795, 'spell_ashran_blade_twister');
+REPLACE INTO spell_script_names VALUE (176670, 'spell_ashran_emberfall_living_bomb');
+REPLACE INTO spell_script_names VALUE (161091, 'grimrail_depot_rocketspark_spell_new_plan');
+
+REPLACE INTO spell_script_names VALUE (134758, 'at_quilen_spear');
+REPLACE INTO spell_script_names VALUE (136421, 'at_quilen_spear');
+REPLACE INTO spell_script_names VALUE (136451, 'at_quilen_spear');
+REPLACE INTO spell_script_names VALUE (137416, 'at_flames_of_passion');
+REPLACE INTO spell_script_names VALUE (134628, 'spell_unleashed_flame');
+REPLACE INTO spell_script_names VALUE (122385, 'spell_ook_ook_barrel');
+REPLACE INTO spell_script_names VALUE (122949, 'spell_unseen_strike');
+REPLACE INTO spell_script_names VALUE (138435, 'spell_arcing_lightning');
+REPLACE INTO spell_script_names VALUE (137499, 'at_lightning_whip');
+REPLACE INTO spell_script_names VALUE (135150, 'at_crashing_thunder');
+REPLACE INTO spell_script_names VALUE (137232, 'spell_dead_zones');
+REPLACE INTO spell_script_names VALUE (135145, 'spell_frozen');
+
+REPLACE INTO `achievement_criteria_data` (`criteria_id`,`type`,`value1`,`value2`,`ScriptName`) VALUES
+(10568,11,0,0,'achievement_he_feeds_on_your_tears'), -- He Feeds On Your Tears (10 player)
+(10570,11,0,0,'achievement_he_feeds_on_your_tears'); -- He Feeds On Your Tears (25 player)
+
+REPLACE INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `data24`, `data25`, `data26`, `data27`, `data28`, `data29`, `data30`, `data31`, `data32`, `unkInt32`, `AIName`, `ScriptName`, `BuildVerified`) VALUES('900000','5','19153','Duel Area','','','','0','0','1.5','0','0','0','0','0','0','0','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','go_duel_area_flag','1');
+delete from `gameobject_template` where entry = 237738;
+insert into `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `data24`, `data25`, `data26`, `data27`, `data28`, `data29`, `data30`, `data31`, `data32`, `unkInt32`, `AIName`, `ScriptName`, `BuildVerified`) values('237738','22','20809','Portal to Ashran','','','','0','0','1','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','go_ashran_portal','19116');
+REPLACE INTO `achievement_criteria_data` VALUES
+(7703, 6, 4197, 0, ''),
+(7703, 11, 0, 0, 'achievement_wg_didnt_stand_a_chance');
+
+
+UPDATE gameobject_template SET ScriptName = "auchindoun_teronogor_gameobject_soul_transporter_04" WHERE entry = 345368;
+
+UPDATE creature_template SET ScriptName = "the_everbloom_mob_dreadpital_toxin", AIName = "" WHERE entry = 81864;
+
+UPDATE creature_template SET ScriptName = "the_everbloom_xeritac_mob_venom_sprayer", AIName = "" WHERE entry = 86547;
+UPDATE creature_template SET ScriptName = "the_everbloom_yalnu_mob_vicious_mandragora", AIName = "" WHERE entry = 84399;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_scout", AIName = "" WHERE entry = 82590;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technician", AIName = "" WHERE entry = 81236;
+
+REPLACE INTO `instance_template` (`map`, `parent`, `script`, `allowMount`) VALUES
+(1208, 1116, 'instance_grimrail_depot', 0),  
+(1112, 1116, 'instance_scenario_black_temple', 0);
+
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_gromkar_capitan", AIName = "" WHERE entry = 82597;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_gromkar_farseer", AIName = "" WHERE entry = 82579;
+UPDATE creature_template SET ScriptName = "grimrail_depot_skylord_tovra_creature_rkuna", AIName = "" WHERE entry = 80004;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technician", AIName = "" WHERE entry = 81236;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technician", AIName = "" WHERE entry = 81236;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technician", AIName = "" WHERE entry = 81236;
+UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technician", AIName = "" WHERE entry = 81236;
+
+REPLACE INTO outdoorpvp_template (TypeId, ScriptName, COMMENT) VALUES (7, "OutdoorPvP_TarrenMillFun", "Tarren Mill fun");
 
 UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_bombadier", AIName = "" WHERE entry = 81407;
 UPDATE creature_template SET ScriptName = "grimrail_depot_mob_assault_cannon", AIName = "" WHERE entry = 79548;
@@ -256,12 +346,35 @@ UPDATE creature_template SET ScriptName = "grimrail_depot_rocketspark_mob_borka"
 UPDATE creature_template SET ScriptName = "grimrail_depot_nitrogg_thundertower_mob_gromkar_grenadier", AIName = "" WHERE entry = 79739;
 UPDATE creature_template SET ScriptName = "grimrail_depot_nitrogg_thundertower_mob_gromkar_boomer", AIName = "" WHERE entry = 79720;
 UPDATE creature_template SET ScriptName = "grimrail_depot_nitrogg_thundertower_mob_iron_turret", AIName = "" WHERE entry = 85216;
-UPDATE `creature_template` SET `speed_run`=1.28571426868439, `npcflag`=0, `VehicleId`=494, `minlevel`=4, `maxlevel`=4, `Faction_A`=2203, `Faction_H`=2203,`Unit_Flags`=8, `Modelid1`=236, `Resistance2`=90, `Resistance4`=1, `unit_class`=2, `scriptname`='npc_greymane_horse', `mechanic_immune_mask`=2147483647 WHERE `entry`=35905;
+UPDATE `creature_template` SET `speed_run`=1.28571426868439, `npcflag`=0, `VehicleId`=494, `minlevel`=4, `maxlevel`=4, `Unit_Flags`=8, `Modelid1`=236, `Resistance2`=90, `Resistance4`=1, `unit_class`=2, `scriptname`='npc_greymane_horse', `mechanic_immune_mask`=2147483647 WHERE `entry`=35905;
 UPDATE `creature_template` SET `ScriptName` = 'mob_general_purpose_bunnyJMF' WHERE `entry` = 55091;
 UPDATE creature_template SET ScriptName = "boss_skylord_torva", AIName = "" WHERE entry = 80005;
 UPDATE creature_template SET ScriptName = "boss_nitrogg_thundertower", AIName = "" WHERE entry = 79545;
 UPDATE creature_template SET ScriptName = "boss_rocketspark", AIName = "" WHERE entry = 77803;
 UPDATE creature_template SET ScriptName = "the_everbloom_archmage_sol_mob_noxious_explosion", AIName = "" WHERE entry = 213151;
+UPDATE `creature_template` SET `ScriptName` = 'npc_gunship_cannon' WHERE `entry` = 36838;
+UPDATE `creature_template` SET `ScriptName`='npc_image_belgaristrasz' WHERE `entry`=28012;
+UPDATE areatrigger_template SET ScriptName='at_down_draft' WHERE spell_id=134370;
+UPDATE `creature_template` SET `ScriptName` = 'grimrail_depot_nitrogg_thundertower_mob_assault_turret' WHERE `entry` = 82721;
+UPDATE `creature_template` SET `ScriptName` = 'grimrail_depot_nitrogg_thundertower_mob_iron_infantry' WHERE `entry` = 79888;
+UPDATE `creature_template` SET `ScriptName` = 'auchindoun_kaathar_mob_teleport_players' WHERE `entry` = 3242352;
+UPDATE `creature_template` SET `ScriptName` = 'npc_PetBattleTrainer' WHERE `entry` IN (86056,64572,64582,63073,63070,63596,87427,63626,63086,63067,63080,63014,63061,63075,63083,63077);
+UPDATE `creature_template` SET `ScriptName` = 'npc_treant_balance' WHERE `entry` = 1964;
+UPDATE `creature_template` SET `ScriptName` = 'npc_pvp_training_dummy' WHERE `entry` = 2673;
+UPDATE `creature_template` SET `ScriptName` = 'npc_crowley_horse' WHERE `entry` = 35231;
+
+DROP TABLE IF EXISTS `fun_tarrenmill_reward`;
+
+CREATE TABLE `fun_tarrenmill_reward` 
+(
+  `kills` int(10) unsigned NOT NULL,
+  `title_h` int(10) unsigned NOT NULL,
+  `title_a` int(10) unsigned NOT NULL,
+  `item_h` int(10) unsigned NOT NULL,
+  `item_a` int(10) unsigned NOT NULL,
+  `aura_a` int(10) unsigned NOT NULL,
+  `aura_h` int(10) unsigned NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 UPDATE `creature` SET `spawndist` = 8, `MovementType` = 1 WHERE `id` IN (50039,57205,53704,56730,36231,34511,16521,37070,46363,2031,706,37073,15294,15271,3101,3102,15273,35200,34865,1501);
