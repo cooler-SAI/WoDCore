@@ -334,7 +334,6 @@ UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technicia
 UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technician", AIName = "" WHERE entry = 81236;
 UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_technician", AIName = "" WHERE entry = 81236;
 
-REPLACE INTO outdoorpvp_template (TypeId, ScriptName, COMMENT) VALUES (7, "OutdoorPvP_TarrenMillFun", "Tarren Mill fun");
 
 UPDATE creature_template SET ScriptName = "grimrail_depot_mob_grimrail_bombadier", AIName = "" WHERE entry = 81407;
 UPDATE creature_template SET ScriptName = "grimrail_depot_mob_assault_cannon", AIName = "" WHERE entry = 79548;
