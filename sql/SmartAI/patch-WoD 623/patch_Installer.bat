@@ -25,8 +25,8 @@ echo .
 echo    ````````````$````````$
 echo    ````````````$````````$  *SmartAI Lab scripts*
 echo    $$$```$$$``$$$``$$$``$
-echo    $``$`````$``$``$```$`$$$$$    Development Version
-echo    $$$```$$$$``$``$`````$```$          for xDB original
+echo    $``$`````$``$``$```$`$$$$$    Warlords of Draenor 6.2.3 Version
+echo    $$$```$$$$``$``$`````$```$          for WoDDB original
 echo    $````$```$``$``$```$`$```$         
 echo    $`````$$$$``$$``$$$``$```$ 
 echo.
