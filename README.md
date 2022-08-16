@@ -4,8 +4,6 @@ Firestorm WoD Leak World of Warcraft Warlords of Draenor (6.2.3.20779) emulator 
 ### BEWARE ! 
 Never commit into interrealm only crash fix, wod branch is the prod branch !
 
-[![Build Status](https://drone-1.fat.sh/api/badges/MilleniumStudio/wod/status.svg)](https://drone-1.fat.sh/MilleniumStudio/wod)
-
 ## Requirements
 
 + Platform: Linux, Windows or Mac
