@@ -24,18 +24,6 @@ Example: Win32 OpenSSL v1.0.2k
 + Xcode 7 (Mac only)
 + P>S> ONLY FOR LOCAL PLAY DOWNLOAD Microsoft Visual C++ 2015 Redistributable Package 
 https://www.microsoft.com/en-us/download/details.aspx?id=48145
-
-## Install
-+ Get dbc,db2,maps,vmaps,mmaps : https://mega.nz/#!GUlUlB6J!mefm3EudO3lLn1FLLfJJxv8DH6a1Zh1iCOmQAl_WC48
-+ Get full World of Warcraft Warlords of Draenor Client 6.2.3 (20779) patched ruRU & enGB:
-part 1 - https://mega.nz/#!OIkXVb7Y!cFWofTc1CzCxvdrF0K_ypL-IYZurRRnnnJY5ZzVwwDk
-part 2 - https://mega.nz/#!zFsgDYga!K4KPWaU4LFtN2EBc9K4bJs33IX3g61nwykGzyQCuwxQ
-part 3 - https://mega.nz/#!bA8zEJjC!rFAC8LTzhK9aGwUtUUVsZd7drI4O8aKHTHD3rfm15m0
-part 4 - https://mega.nz/#!zIUlSSzb!60rfg4mmYzOv6T1fLpP8sNTxGdUkTmOgg0b2BhtF1N8
-part 5 - https://mega.nz/#!WB8h0IYL!dlyU6LK0piS9h9mf7b6dDr1VXVVvc2pbjkFegZTvKYI
-part 6 - https://mega.nz/#!uU0SwTKS!PUpkBVrsiKjD6gEYwZn3xl2mTuzWC8mYot7QoxqRYFk
-part 7 - https://mega.nz/#!rMsjEbLS!7EVdlOjUN-iUcRYKMNvrPO0xOgM_CEo-u4IQjSQd50E
-
 Detailed installation guides are available in the wiki for
 [Windows](http://collab.kpsn.org/display/tc/Win),
 [Linux](http://collab.kpsn.org/display/tc/Linux) and
